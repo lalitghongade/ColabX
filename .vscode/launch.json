@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SoundxApplication<soundx>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.colabx.soundx.SoundxApplication",
+            "projectName": "soundx",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

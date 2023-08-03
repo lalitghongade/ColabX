@@ -1,0 +1,38 @@
+
+
+<div class="container">
+  <div>
+    <P>Record Your Listening Level For Today</P>
+  </div>
+
+    <div>
+      <button type="button"   class="btn btn-dark" (click)="startRecording()"  [disabled]="isRecording">Start</button>
+      <button type="button"   class="btn btn-dark" (click)="stopRecording()" [disabled]="!isRecording">Stop</button>
+
+        <!-- <button (click)="startRecording()"  [disabled]="isRecording">Start </button> -->
+        <!-- <button (click)="stopRecording()" [disabled]="!isRecording">Stop Recording</button> -->
+        <!-- <button (click)="clearRecording()">Clear Recording</button> -->
+        <!-- <button *ngIf="globalUrl && textInput && selectedOption" (click)="sendAudioToBackend()">Send Audio to Backend</button> -->
+    </div>
+      
+    <audio *ngIf="globalBlob" #audioElement controls></audio>
+   
+<div class="whatsapp-input">
+  <input type="text" [(ngModel)]="textInput" placeholder="Recording Context Name..." (keydown.enter)="addTitle()">
+  <select [(ngModel)]="selectedOption">
+    <option value="1">Internal </option>
+    <option value="2">Focused</option>
+    <option value="3">Global</option>
+  </select>
+  <!-- <button class="mic-button" >
+    <span *ngIf="!isRecording" (click)="startRecording()" ></span>
+    <span *ngIf="isRecording"  (click)="stopRecording()" ></span>
+  </button> -->
+</div>
+      
+<button type="button"   class="btn btn-dark" *ngIf="globalUrl && textInput && selectedOption" (click)="sendAudioToBackend()">Save</button>
+
+</div>
+
+
+

@@ -1,0 +1,28 @@
+.whatsapp-input {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+  }
+  
+  .whatsapp-input input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 4px;
+  }
+  
+  .whatsapp-input select {
+    margin-right: 8px;
+  }
+  
+  .whatsapp-input .mic-button {
+    font-size: 2rem;
+    margin-left: 8px;
+    padding: 8px;
+    border-radius: 50%;
+  }
+  
